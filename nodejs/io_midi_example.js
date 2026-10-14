@@ -1,6 +1,8 @@
 // T. Collins, 21.1.2024
 // Pre-processing MIDI files, calculating their mean MIDI note number, and writing them to file.
 
+// RUN WITH: node io_midi_example -u Rick
+
 // 1. Requires
 const argv = require("minimist")(process.argv.slice(2))
 const fs = require("fs")
@@ -13,14 +15,16 @@ const mu = require("maia-util")
 
 // 2. Individual user paths
 const mainPaths = {
-  "tom": {
-    "inDir": path.join(
-      "/Users", "tomthecollins", "Shizz", "repos", "cma4w", "io", "in",
-      "hip_hop_midi", "mid"
-    ),
-    "outDir": path.join(
-      "/Users", "tomthecollins", "Shizz", "repos", "cma4w", "io", "out"
-    ),
+  "Rick": {
+    // "inDir": path.join(
+    //   "/Users", "tomthecollins", "Shizz", "repos", "cma4w", "io", "in",
+    //   "hip_hop_midi", "mid"
+    // ),
+    "inDir": "C:/Users/theri/OneDrive/Documents/MUE/web_audio/hip_hop_midi/mid",
+    // "outDir": path.join(
+    //   "/Users", "tomthecollins", "Shizz", "repos", "cma4w", "io", "out"
+    // ),
+    "outDir": "C:/Users/theri/OneDrive/Documents/MUE/web_audio/cma4w/out",
     "outFileName": "mean_mnns"
   },
   "anotherUser": {
